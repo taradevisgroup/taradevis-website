@@ -2,7 +2,9 @@
 
 A responsive, blue-and-white website for Tara Devi’s Group, built from the supplied reference HTML, revised company content, and logo reference.
 
-The homepage includes a scenic Himalayan valley hero, company story and vision, a “Who we are” promoter introduction, Shimla and Kufri developments, leadership profiles, careers, and an enquiry form that prepares a WhatsApp message for **+91 98711 77761**. Visitors review and send the message themselves. No enquiry data is stored by this website.
+The homepage includes a scenic Himalayan valley hero, our philosophy and vision, a “Who we are” promoter introduction, Shimla and Kufri developments, leadership profiles, careers, and an enquiry form that prepares a WhatsApp message for **+91 98711 77761**. Visitors review and send the message themselves. No enquiry data is stored by this website.
+
+The hero headline reads **“Legacy living, peaks apart.”** The header’s **Our philosophy** link leads to the opening philosophy section, followed by **A Different Point of View** (forest image) and **The Taradevi’s Way** (four principles), before **02 / Our Residences**. These sections use the original supplied HTML reference’s copy, adapted to the current blue-and-white theme. The header’s **Get in touch** button links directly to `#enquiry-form` and selects a general enquiry. The hero retains the **Explore our residences** CTA.
 
 ## Publish with GitHub Pages
 
@@ -42,6 +44,8 @@ The supplied photographs replace the initial illustrative stock images. The Kufr
 
 The “Who we are” section sits immediately before “03 / Our Vision” and retains the existing Cormorant/Manrope typography and blue-and-white theme. Its company and promoter details come from the original supplied HTML reference. Its mountain photograph uses the same [Unsplash source image](https://images.unsplash.com/photo-1464822759023-fed622ff2c3b) as that reference, served locally as `assets/who-we-are-mountains.webp`.
 
+The forest photograph in “A Different Point of View” comes from the original reference’s [Unsplash image](https://images.unsplash.com/photo-1448375240586-882707db888b) and is served locally as `assets/philosophy-forest.webp`.
+
 - Cormorant Garamond and Manrope: self-hosted font subsets from Google Fonts under the SIL Open Font License. The license notices are included in `assets/`.
 
 Project status, availability, specifications and approvals should be confirmed directly with the business before any factual updates. No prices, testimonials, invented team portraits or unprovided amenities have been added.
@@ -53,6 +57,7 @@ Includes keyboard navigation, a skip link, semantic landmarks, labelled form con
 ## Verification
 
 JavaScript syntax, local file references, section anchors, asset integrity, and enquiry interactions are checked during preparation. Browser rendering and device testing should also be performed before a final public launch.
+
 
 
 
