@@ -32,12 +32,12 @@ Keep the enquiry number consistent in `index.html` and `script.js` when changing
 
 The revised Word document supplies the story, vision, leadership and careers content. The reference HTML supplies the project names, contact number, company legal name and RERA identifier. The revised content takes precedence where it differs. The team member name **Digviay Jamwal** follows the supplied document’s spelling.
 
-The hero is a generated Himalayan landscape illustration, not a photograph of a development. The supplied logo reference was prepared as a transparent web emblem. The project cards use the original photographs supplied by the website owner in `Sunset Hilltop Resort Panorama.zip`, resized and encoded as WebP for faster loading:
+The hero is a generated Himalayan landscape illustration, not a photograph of a development. The supplied logo reference was prepared as a transparent web emblem. The project cards use the original photographs supplied by the website owner, resized and encoded as WebP for faster loading:
 
 - **Tara Devi Enclave:** `IMG_9936.png` — bedroom with a balcony and forest view. The portrait photograph is displayed with a lower focal point to keep the room and view in the card.
-- **Downtown Kufri:** `Sunset Hilltop Resort Panorama.png` — a panoramic location view at sunset.
+- **Downtown Kufri:** `Sunlit Terraced Mountain Valley.png`, supplied in `Sunlit Terraced Mountain Valley.zip` — a sunlit terraced mountain valley with forested slopes and distant peaks. This replaces the earlier sunset panorama.
 
-The supplied photographs replace the initial illustrative stock images. The Kufri photograph is labelled as a location view.
+The supplied photographs replace the initial illustrative stock images. The Kufri photograph is labelled as a scenic view.
 
 
 The “Who we are” section sits immediately before “03 / Our Vision” and retains the existing Cormorant/Manrope typography and blue-and-white theme. Its company and promoter details come from the original supplied HTML reference. Its mountain photograph uses the same [Unsplash source image](https://images.unsplash.com/photo-1464822759023-fed622ff2c3b) as that reference, served locally as `assets/who-we-are-mountains.webp`.
@@ -53,5 +53,6 @@ Includes keyboard navigation, a skip link, semantic landmarks, labelled form con
 ## Verification
 
 JavaScript syntax, local file references, section anchors, asset integrity, and enquiry interactions are checked during preparation. Browser rendering and device testing should also be performed before a final public launch.
+
 
 
