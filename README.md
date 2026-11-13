@@ -32,10 +32,13 @@ Keep the enquiry number consistent in `index.html` and `script.js` when changing
 
 The revised Word document supplies the story, vision, leadership and careers content. The reference HTML supplies the project names, contact number, company legal name and RERA identifier. The revised content takes precedence where it differs. The team member name **Digviay Jamwal** follows the supplied document’s spelling.
 
-The hero is a generated Himalayan landscape illustration, not a photograph of a development. The supplied logo reference was prepared as a transparent web emblem. Project imagery is representative stock photography, visibly labelled on the website. Replace it with approved project photographs when available.
+The hero is a generated Himalayan landscape illustration, not a photograph of a development. The supplied logo reference was prepared as a transparent web emblem. The project cards use the original photographs supplied by the website owner in `Sunset Hilltop Resort Panorama.zip`, resized and encoded as WebP for faster loading:
 
-- Enclave illustrative interior: [source image on Unsplash](https://images.unsplash.com/photo-1600607687920-4e2a09cf159d).
-- Kufri illustrative retreat: [source image on Unsplash](https://images.unsplash.com/photo-1510798831971-661eb04b3739).
+- **Tara Devi Enclave:** `IMG_9936.png` — bedroom with a balcony and forest view. The portrait photograph is displayed with a lower focal point to keep the room and view in the card.
+- **Downtown Kufri:** `Sunset Hilltop Resort Panorama.png` — a panoramic location view at sunset.
+
+The supplied photographs replace the initial illustrative stock images. The Kufri photograph is labelled as a location view.
+
 - Cormorant Garamond and Manrope: self-hosted font subsets from Google Fonts under the SIL Open Font License. The license notices are included in `assets/`.
 
 Project status, availability, specifications and approvals should be confirmed directly with the business before any factual updates. No prices, testimonials, invented team portraits or unprovided amenities have been added.
@@ -47,3 +50,4 @@ Includes keyboard navigation, a skip link, semantic landmarks, labelled form con
 ## Verification
 
 JavaScript syntax, local file references, section anchors, asset integrity, and enquiry interactions are checked during preparation. Browser rendering and device testing should also be performed before a final public launch.
+
