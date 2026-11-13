@@ -34,7 +34,7 @@ The revised Word document supplies the story, vision, leadership and careers con
 
 The hero is a generated Himalayan landscape illustration, not a photograph of a development. The supplied logo reference was prepared as a transparent web emblem. Project imagery is representative stock photography, visibly labelled on the website. Replace it with approved project photographs when available.
 
-- Enclave illustrative interior: [Unsplash photograph](https://unsplash.com/photos/1600607687920-4e2a09cf159d) / [source image](https://images.unsplash.com/photo-1600607687920-4e2a09cf159d).
+- Enclave illustrative interior: [source image on Unsplash](https://images.unsplash.com/photo-1600607687920-4e2a09cf159d).
 - Kufri illustrative retreat: [source image on Unsplash](https://images.unsplash.com/photo-1510798831971-661eb04b3739).
 - Cormorant Garamond and Manrope: self-hosted font subsets from Google Fonts under the SIL Open Font License. The license notices are included in `assets/`.
 
