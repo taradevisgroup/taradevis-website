@@ -2,7 +2,7 @@
 
 A responsive, blue-and-white website for Tara Devi’s Group, built from the supplied reference HTML, revised company content, and logo reference.
 
-The homepage includes a scenic Himalayan valley hero, company story and vision, Shimla and Kufri developments, leadership profiles, careers, and an enquiry form that prepares a WhatsApp message for **+91 98711 77761**. Visitors review and send the message themselves. No enquiry data is stored by this website.
+The homepage includes a scenic Himalayan valley hero, company story and vision, a “Who we are” promoter introduction, Shimla and Kufri developments, leadership profiles, careers, and an enquiry form that prepares a WhatsApp message for **+91 98711 77761**. Visitors review and send the message themselves. No enquiry data is stored by this website.
 
 ## Publish with GitHub Pages
 
@@ -39,6 +39,9 @@ The hero is a generated Himalayan landscape illustration, not a photograph of a 
 
 The supplied photographs replace the initial illustrative stock images. The Kufri photograph is labelled as a location view.
 
+
+The “Who we are” section sits immediately before “03 / Our Vision” and retains the existing Cormorant/Manrope typography and blue-and-white theme. Its company and promoter details come from the original supplied HTML reference. Its mountain photograph uses the same [Unsplash source image](https://images.unsplash.com/photo-1464822759023-fed622ff2c3b) as that reference, served locally as `assets/who-we-are-mountains.webp`.
+
 - Cormorant Garamond and Manrope: self-hosted font subsets from Google Fonts under the SIL Open Font License. The license notices are included in `assets/`.
 
 Project status, availability, specifications and approvals should be confirmed directly with the business before any factual updates. No prices, testimonials, invented team portraits or unprovided amenities have been added.
@@ -50,4 +53,5 @@ Includes keyboard navigation, a skip link, semantic landmarks, labelled form con
 ## Verification
 
 JavaScript syntax, local file references, section anchors, asset integrity, and enquiry interactions are checked during preparation. Browser rendering and device testing should also be performed before a final public launch.
+
 
