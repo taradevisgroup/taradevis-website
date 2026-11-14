@@ -31,53 +31,46 @@
   });
   window.matchMedia('(max-width: 900px)').addEventListener('change', () => setMenu(false));
 
-  const form = document.querySelector('#enquiry-form');
-  form.querySelector('[type=submit]').disabled = false;
-  const name = form.elements.name;
-  const phone = form.elements.phone;
-  const project = form.elements.project;
-  const message = form.elements.message;
-  const result = document.querySelector('#form-result');
-  let intent = 'Enquire about a residence';
-  document.querySelectorAll('[data-project]').forEach((link) => {
-    link.addEventListener('click', () => {
-      project.value = link.dataset.project;
-      intent = link.dataset.intent || 'Enquire about a residence';
-      result.hidden = true;
-    });
+  const hubspotFormId = '246d4822-f5ae-4e5f-86f1-abfcca5d1de2';
+  const interestField = '0-1/im_interested_in';
+  const interestValues = {
+    'Tara Devi Enclave': 'Tara Devis Enclave',
+    'Downtown Kufri': 'Downtown Kufri',
+    'General enquiry': 'General enquiry'
+  };
+  let hubspotForm = null;
+  let selectedEnquiry = null;
+
+  const applyProjectSelection = () => {
+    if (!hubspotForm || !selectedEnquiry) return;
+    try {
+      const value = interestValues[selectedEnquiry.project];
+      if (value !== undefined) hubspotForm.setFieldValue(interestField, value);
+      hubspotForm.setExtraSubmissionMetadata({
+        website_project: selectedEnquiry.project,
+        website_enquiry_intent: selectedEnquiry.intent
+      });
+    } catch (error) {
+      console.warn('HubSpot project preselection could not be applied.', error);
+    }
+  };
+
+  window.addEventListener('hs-form-event:on-ready', (event) => {
+    if (event.detail?.formId !== hubspotFormId) return;
+    hubspotForm = window.HubSpotFormsV4?.getFormFromEvent(event);
+    if (!hubspotForm) return;
+    document.querySelector('#enquiry-form').dataset.hubspotReady = 'true';
+    applyProjectSelection();
   });
 
-  const validateName = () => name.setCustomValidity(name.value.trim() ? '' : 'Please enter your name.');
-  const validatePhone = () => {
-    const digits = phone.value.replace(/\D/g, '');
-    const validCharacters = /^\+?[\d\s().-]+$/.test(phone.value.trim());
-    phone.setCustomValidity(validCharacters && digits.length >= 10 && digits.length <= 15 ? '' : 'Please enter a valid phone number with 10–15 digits.');
-  };
-  name.addEventListener('input', validateName);
-  phone.addEventListener('input', validatePhone);
-  form.addEventListener('input', () => { result.hidden = true; });
-  project.addEventListener('change', () => {
-    intent = 'Enquire about a residence';
-    result.hidden = true;
-  });
-  form.addEventListener('submit', (event) => {
-    event.preventDefault();
-    validateName();
-    validatePhone();
-    if (!form.reportValidity()) return;
-    const lines = [
-      'Hello Tara Devi’s Group,',
-      `I would like to ${intent.charAt(0).toLowerCase() + intent.slice(1)}.`,
-      `Interested in: ${project.value}`,
-      `Name: ${name.value.trim()}`,
-      `Phone: ${phone.value.trim()}`,
-      form.elements.city.value.trim() ? `City: ${form.elements.city.value.trim()}` : '',
-      message.value.trim() ? `Message: ${message.value.trim()}` : ''
-    ].filter(Boolean);
-    const url = `https://wa.me/919871177761?text=${encodeURIComponent(lines.join('\n'))}`;
-    document.querySelector('#whatsapp-fallback').href = url;
-    result.hidden = false;
-    window.open(url, '_blank', 'noopener,noreferrer');
+  document.querySelectorAll('[data-project]').forEach((link) => {
+    link.addEventListener('click', () => {
+      selectedEnquiry = {
+        project: link.dataset.project,
+        intent: link.dataset.intent || 'Enquire about a residence'
+      };
+      applyProjectSelection();
+    });
   });
 
   const privacy = document.querySelector('#privacy');
@@ -113,3 +106,4 @@
     document.querySelectorAll('main section[id]').forEach((section) => observer.observe(section));
   }
 })();
+

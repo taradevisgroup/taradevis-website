@@ -63,3 +63,13 @@
 @media(max-width:900px){.philosophy-grid{grid-template-columns:1fr;gap:28px}.philosophy-label .eyebrow{font-size:9px;letter-spacing:1.5px}.philosophy-copy h2{font-size:49px;max-width:760px}.philosophy-copy>p{font-size:12px}.point-of-view{min-height:480px;padding-block:70px}.point-of-view-content{padding-left:0}.point-of-view-content h2{font-size:65px;max-width:730px}.principles-heading{grid-template-columns:1fr 1.6fr;gap:35px;margin-bottom:42px}.principles-heading h2{font-size:49px}.principle-cards{grid-template-columns:repeat(2,minmax(0,1fr))}.principle-card{min-height:240px;padding:27px 28px 24px}.principle-card:nth-child(3){border-left:0;padding-left:0}.principle-card:nth-child(n+3){border-top:1px solid var(--line)}.principle-card:nth-child(2){padding-right:0}.principle-card h3{font-size:29px}.principle-card p{font-size:12px;max-width:350px}}
 @media(max-width:600px){.philosophy-grid{gap:24px}.philosophy-copy h2{font-size:43px;letter-spacing:-.8px;line-height:1.12;margin-bottom:26px}.philosophy-copy>p{font-size:12px;line-height:1.95;margin-top:17px}.point-of-view{min-height:450px;padding-block:60px}.point-of-view-image{object-position:57% center}.point-of-view-overlay{background:linear-gradient(90deg,rgba(6,29,48,.79),rgba(8,38,59,.46))}.point-of-view-content h2{font-size:48px;line-height:1.14;letter-spacing:-.8px;margin:25px 0}.point-of-view-content>p:last-child{font-size:12px;max-width:310px}.principles-heading{grid-template-columns:1fr;gap:21px;margin-bottom:32px}.principles-heading>.eyebrow{margin-top:0;font-size:8px}.principles-heading h2{font-size:45px}.principle-cards{grid-template-columns:1fr}.principle-card,.principle-card:first-child,.principle-card:nth-child(3),.principle-card:nth-child(n+3){border-left:0;border-top:0;border-bottom:1px solid var(--line);padding:25px 0;min-height:0}.principle-card:last-child{border-bottom:0;padding-bottom:0}.principle-index{margin-bottom:16px}.principle-card h3{font-size:29px;margin-bottom:14px}.principle-card p{font-size:12px;max-width:100%}}
 
+
+/* HubSpot enquiry panel; form fields and submission behavior are managed in HubSpot. */
+.hubspot-enquiry{min-width:0}
+.hubspot-enquiry>.eyebrow{margin-bottom:20px}
+.hubspot-enquiry .hs-form-frame{width:100%;min-width:0}
+.hubspot-enquiry>.form-note{padding-top:18px;border-top:1px solid var(--line);margin-top:20px}
+.hubspot-alternative{font-size:10px;line-height:1.9;color:var(--text);margin-top:12px}
+.hubspot-alternative a{color:var(--navy);text-decoration:underline;text-underline-offset:3px}
+@media(max-width:600px){.enquiry-form.hubspot-enquiry{padding:26px 18px}.hubspot-enquiry>.eyebrow{margin-bottom:16px}}
+

@@ -2,7 +2,7 @@
 
 A responsive, blue-and-white website for Tara Devi’s Group, built from the supplied reference HTML, revised company content, and logo reference.
 
-The homepage includes a scenic Himalayan valley hero, our philosophy and vision, a “Who we are” promoter introduction, Shimla and Kufri developments, leadership profiles, careers, and an enquiry form that prepares a WhatsApp message for **+91 98711 77761**. Visitors review and send the message themselves. No enquiry data is stored by this website.
+The homepage includes a scenic Himalayan valley hero, our philosophy and vision, a “Who we are” promoter introduction, Shimla and Kufri developments, leadership profiles, careers, and an embedded HubSpot enquiry form that sends submissions to Tara Devi’s Group. Telephone and WhatsApp contact links remain available at **+91 98711 77761**.
 
 The hero headline reads **“Legacy living, peaks apart.”** The header’s **Our philosophy** link leads to the opening philosophy section, followed by **A Different Point of View** (forest image) and **The Taradevi’s Way** (four principles), before **02 / Our Residences**. These sections use the original supplied HTML reference’s copy, adapted to the current blue-and-white theme. The header’s **Get in touch** button links directly to `#enquiry-form` and selects a general enquiry. The hero retains the **Explore our residences** CTA.
 
@@ -13,7 +13,7 @@ The site is ready for GitHub Pages without a build step or package installation:
 1. Open this repository’s **Settings → Pages**.
 2. Under **Build and deployment**, choose **Deploy from a branch**.
 3. Choose **main** and **/ (root)**, then **Save**.
-4. Once GitHub’s deployment finishes, open **https://taradevisenclave.github.io/taradevis-website/**.
+4. Once GitHub’s deployment finishes, open **https://taradevisgroup.github.io/taradevis-website/**.
 
 This address becomes live only after GitHub Pages is enabled and deployment succeeds. The repository can also be served by any static website host.
 
@@ -25,10 +25,25 @@ Open `index.html` directly, or run `python3 -m http.server 8000` from this direc
 
 - `index.html`: website content, team profiles, contact number and careers email.
 - `styles.css`: branding, layouts and responsive styles. Brand colors are defined at the top in `:root`.
-- `script.js`: mobile navigation, project selection, enquiry validation, WhatsApp preparation and privacy dialog.
+- `script.js`: mobile navigation, HubSpot project preselection and enquiry metadata, and the privacy dialog.
 - `assets/`: local images, emblem, fonts and font licenses.
 
-Keep the enquiry number consistent in `index.html` and `script.js` when changing it. Careers enquiries open the visitor’s email app addressed to `careers@taradevis.com`. Team profiles use designed initials because team portraits were not supplied.
+Phone and WhatsApp links are configured in `index.html`. HubSpot embed IDs are in the HTML, with the form ID and verified interest-field mapping in `script.js`. Careers enquiries open the visitor’s email app addressed to `careers@taradevis.com`. Team profiles use designed initials because team portraits were not supplied.
+
+
+## HubSpot enquiry form
+
+- Region: `na2`
+- Portal ID: `248005545`
+- Form ID: `246d4822-f5ae-4e5f-86f1-abfcca5d1de2`
+- Official loader: `https://js-na2.hsforms.net/forms/embed/248005545.js`
+- Placement: the existing `#enquiry-form` panel in the contact section.
+
+HubSpot manages the form’s fields, validation, styling, submission destination, consent notices and success behavior. No server-side API key is needed for this public embed.
+
+The website uses HubSpot’s documented `hs-form-event:on-ready` event and `HubSpotFormsV4` API to preserve project selection from the website’s CTA buttons. The verified HubSpot field reference is `0-1/im_interested_in`, with values `Tara Devis Enclave`, `Downtown Kufri` and `General enquiry`. The website label **Tara Devi Enclave** maps to HubSpot’s **Tara Devis Enclave** option. HubSpot also receives the originating website project and enquiry intent as extra submission metadata. Visitors can still change their interest inside the HubSpot form.
+
+If the HubSpot form or property options are changed, update the field mapping in `script.js` as needed. Do not add the old WhatsApp form submit handler back; HubSpot owns submission.
 
 ## Content and imagery
 
@@ -52,11 +67,12 @@ Project status, availability, specifications and approvals should be confirmed d
 
 ## Accessibility and privacy
 
-Includes keyboard navigation, a skip link, semantic landmarks, labelled form controls, visible focus styles, reduced-motion support and a native privacy dialog. All fonts and images are served locally. There are no trackers, cookies or analytics scripts. WhatsApp and email links open external services only when a visitor chooses to use them.
+Includes keyboard navigation, a skip link, semantic landmarks, labelled form controls, visible focus styles, reduced-motion support and a native privacy dialog. The website’s own fonts and images are served locally. The enquiry form is hosted by HubSpot and uses HubSpot’s scripts, form settings and privacy policy. WhatsApp and email links are optional contact alternatives.
 
 ## Verification
 
-JavaScript syntax, local file references, section anchors, asset integrity, and enquiry interactions are checked during preparation. Browser rendering and device testing should also be performed before a final public launch.
+The integration is checked for JavaScript errors, form rendering, project preselection, privacy navigation and mobile layout without creating a test submission. Actual lead receipt can be checked by the website owner in HubSpot.
+
 
 
 
